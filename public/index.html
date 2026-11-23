@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shin Min Seung | AI & Data Portfolio Dashboard">
+  <title>Shin Min Seung | AI & Data Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="site-header">
+      <div>
+        <div class="eyebrow">AI • DATA • RESEARCH PORTFOLIO</div>
+        <h1>Shin Min Seung Portfolio Dashboard</h1>
+        <p class="subtitle">데이터를 분석하고, AI를 활용해 인사이트와 결과물로 만드는 사람</p>
+      </div>
+      <div class="header-links">
+        <a href="https://github.com/HSC-Class02/ms-Portfolio" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="#" id="linkedinLink">LinkedIn ↗</a>
+        <div class="status" id="updated">Portfolio Dashboard</div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Portfolio sections">
+      <button class="tab active" data-section="home">Dashboard</button>
+      <button class="tab" data-section="about">01 About</button>
+      <button class="tab" data-section="reports">02 AI-Generated Reports</button>
+      <button class="tab" data-section="qualifications">03 Qualifications & Certifications</button>
+      <button class="tab" data-section="activities">04 Activities</button>
+    </nav>
+
+    <section class="section active" id="home">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">PERSONAL INTELLIGENCE DASHBOARD</div>
+          <h2>안녕하세요,<br><span>신민승</span>입니다.</h2>
+          <p>AI 자동화, 데이터 분석, 리서치 프로젝트를 통해 복잡한 정보를 구조화하고 실질적인 결과물로 만드는 포트폴리오입니다.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-go="reports">AI Reports 보기</button>
+            <button class="secondary-btn" data-go="about">CV 보기</button>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="avatar">SMS</div>
+          <div>
+            <strong>Shin Min Seung</strong>
+            <span>Data & AI Researcher</span>
+            <small>Portfolio / Projects / Activities</small>
+          </div>
+        </div>
+      </div>
+
+      <section class="kpis" id="kpis"></section>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h2>Portfolio Activity Trend</h2><p>최근 활동 및 산출물 추이</p></div>
+            <span class="badge">2026</span>
+          </div>
+          <canvas id="trend" width="760" height="270"></canvas>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <div><h2>Portfolio Composition</h2><p>주요 활동 영역</p></div>
+          </div>
+          <canvas id="composition" width="360" height="270"></canvas>
+          <div class="legend" id="compositionLegend"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div><h2>Recent AI-Generated Reports</h2><p>AI 자동화로 생성·정리한 분석 결과물</p></div>
+          <button class="text-btn" data-go="reports">전체 보기 →</button>
+        </div>
+        <div class="report-table-wrap">
+          <table>
+            <thead><tr><th>분류</th><th>Report</th><th>Method</th><th>Date</th></tr></thead>
+            <tbody id="recentReports"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-title">
+        <div><div class="eyebrow">01 • ABOUT</div><h2>Profile & CV</h2><p>경험과 역량을 한눈에 볼 수 있도록 정리했습니다.</p></div>
+        <div class="button-row">
+          <a class="secondary-btn" href="https://github.com/HSC-Class02/ms-Portfolio" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="secondary-btn" href="#" id="linkedinAbout">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="about-grid">
+        <article class="panel profile-panel">
+          <div class="profile-large">SMS</div>
+          <h3>신민승</h3>
+          <p class="muted">AI · Data · Research Portfolio</p>
+          <p>데이터를 구조화하고 AI를 활용해 분석과 보고서로 연결하는 과정에 관심이 있습니다. 문제를 작은 단위로 나누고, 반복 가능한 방식으로 결과를 만드는 것을 중요하게 생각합니다.</p>
+          <div class="tags"><span>AI Automation</span><span>Data Analysis</span><span>Research</span><span>Dashboard</span></div>
+        </article>
+        <article class="panel">
+          <h3>Education & Experience</h3>
+          <div class="timeline">
+            <div><b>2023 — Present</b><strong>한림성심대학교</strong><span>간호학과 · 4학년</span></div>
+            <div><b>Experience</b><strong>Hospital / Healthcare Experience</strong><span>현장 경험을 바탕으로 문제를 관찰하고 기록하는 역량</span></div>
+            <div><b>Projects</b><strong>AI & Data Projects</strong><span>기업분석 · 자동화 · 리서치 · 대시보드</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="panel">
+        <h3>Core Skills</h3>
+        <div class="skill-grid">
+          <div><b>01</b><strong>AI Workflow</strong><span>AI를 활용한 자료 수집·요약·분석·보고서 자동화</span></div>
+          <div><b>02</b><strong>Data Analysis</strong><span>데이터 정리, 지표 설계, 시각화 및 비교 분석</span></div>
+          <div><b>03</b><strong>Research</strong><span>기업·산업·시장 자료를 구조화하고 인사이트 도출</span></div>
+          <div><b>04</b><strong>Communication</strong><span>복잡한 결과를 이해하기 쉬운 문서와 대시보드로 전달</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reports">
+      <div class="section-title">
+        <div><div class="eyebrow">02 • AI-GENERATED REPORTS</div><h2>AI Research Dashboard</h2><p>AI 자동화로 만든 기업분석·시장분석·리서치 산출물</p></div>
+        <a class="primary-btn" href="https://github.com/HSC-Class02/ms-Portfolio" target="_blank" rel="noopener">GitHub Dashboard ↗</a>
+      </div>
+      <div class="kpis" id="reportKpis"></div>
+      <div class="filters" id="reportFilters"></div>
+      <div class="report-grid" id="reportGrid"></div>
+    </section>
+
+    <section class="section" id="qualifications">
+      <div class="section-title">
+        <div><div class="eyebrow">03 • QUALIFICATIONS & CERTIFICATIONS</div><h2>Qualifications</h2><p>자격증, 수료증, 교육 및 인증을 정리했습니다.</p></div>
+      </div>
+      <div class="kpis" id="certKpis"></div>
+      <div class="cert-grid" id="certGrid"></div>
+    </section>
+
+    <section class="section" id="activities">
+      <div class="section-title">
+        <div><div class="eyebrow">04 • ACTIVITIES</div><h2>Activities & Projects</h2><p>교내외 활동, 프로젝트, 공모전 및 최근 활동 기록</p></div>
+      </div>
+      <div class="project-code-links" aria-label="Project repositories">
+        <a class="project-code-link" href="https://github.com/HSC-Class02/ms-Portfolio/tree/main/projects/samsung-dart" target="_blank" rel="noopener noreferrer" aria-label="삼성전자 DART 재무 분석 프로젝트 열기">
+          <span class="project-code-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 15.5A3.5 3.5 0 0 1 11.5 12h9l4 5H36a4 4 0 0 1 4 4v13.5a3.5 3.5 0 0 1-3.5 3.5h-25A3.5 3.5 0 0 1 8 34.5v-19Z" stroke="currentColor" stroke-width="2.7" stroke-linejoin="round"/>
+              <path d="m19 22-5 5 5 5M29 22l5 5-5 5" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <strong>Portfolio Code</strong>
+          <small>Samsung DART · GitHub ↗</small>
+        </a>
+      </div>
+      <div class="activity-layout">
+        <div class="panel">
+          <h3>Activity Timeline</h3>
+          <div class="activity-timeline" id="activityTimeline"></div>
+        </div>
+        <div class="panel">
+          <h3>Activity Summary</h3>
+          <div class="mini-stats" id="activityStats"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="floating-tools" aria-label="Export tools">
+    <button id="pdfBtn">PDF<span>화면 출력</span></button>
+    <button id="csvBtn">CSV<span>Reports 저장</span></button>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="script.js"></script>
+</body>
+</html>
